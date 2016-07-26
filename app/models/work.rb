@@ -1,6 +1,6 @@
 # Generated via
 #  `rails generate curation_concerns:work GenericWork`
-class GenericWork < ActiveFedora::Base
+class Work < ActiveFedora::Base
   include ::CurationConcerns::WorkBehavior
   include ::CurationConcerns::BasicMetadata
   include Sufia::WorkBehavior

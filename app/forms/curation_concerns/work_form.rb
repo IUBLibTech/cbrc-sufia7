@@ -1,8 +1,8 @@
 # Generated via
 #  `rails generate curation_concerns:work GenericWork`
 module CurationConcerns
-  class GenericWorkForm < Sufia::Forms::WorkForm
-    self.model_class = ::GenericWork
+  class WorkForm < Sufia::Forms::WorkForm
+    self.model_class = ::Work
     self.terms += [:resource_type]
 
     self.terms += [:collectionCode]

@@ -10,5 +10,9 @@ Note that this project disabled creating new users from within the interface. To
 ```
 u = User.create!({:email => "example@example.com", :password => "11111111", :password_confirmation => "11111111" })
 ```
+To run the image ingest rake task:
 
+```
+rake cbrc:import:import_herbs[import_data/20151013_upload.csv,example@example.com]
+```
 

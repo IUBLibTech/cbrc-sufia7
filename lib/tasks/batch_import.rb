@@ -65,7 +65,7 @@ module Cbrc
               obj.edit_users = [owner.email]
               obj.rights = ['http://creativecommons.org/licenses/by-nc/3.0/us/']
               obj.collectionCode = ['herbarium']
-              obj.identifier = ["http://purl.dlib.indiana.edu/iudl/cbrc/herbarium/#{cat_num}"]
+              obj.identifier = ["http://purl.dlib.indiana.edu/iudl/herbarium/#{cat_num}"]
               obj.set_read_groups( ["public"], [])
             end
 

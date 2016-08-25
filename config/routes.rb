@@ -32,6 +32,23 @@ Rails.application.routes.draw do
     end
   end
 
+  #add routes for IU PURLS
+  get '/purl/thumbnail/:id' => redirect { |params, request|
+    realid = (Work.search_with_conditions catalogNumber_sim: params[:id]).first['hasRelatedImage_ssim'].first
+    "http://#{request.host_with_port}/downloads/#{realid}?file=thumbnail"
+  }
+  get '/purl/full/:id' => redirect { |params, request|
+    realid = (Work.search_with_conditions catalogNumber_sim: params[:id]).first['hasRelatedImage_ssim'].first
+    "http://#{request.host_with_port}/downloads/#{realid}"
+  }
+  get '/purl/:id' => redirect { |params, request|
+    realid = (Work.search_with_conditions catalogNumber_sim: params[:id]).first['id']
+    "http://#{request.host_with_port}/concern/works/#{realid}"
+  }
+  #this one isn't implemented yet
+  #get '/purl/archive/:id' => ''
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

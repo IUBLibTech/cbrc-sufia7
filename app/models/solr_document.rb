@@ -9,13 +9,13 @@ class SolrDocument
   include Sufia::SolrDocumentBehavior
 
   def collection_code
-    self[Solrizer.solr_name('collectionCode')]
+    self[Solrizer.solr_name('collection_code')]
   end
   def catalog_number
-    self[Solrizer.solr_name('catalogNumber')]
+    self[Solrizer.solr_name('catalog_number')]
   end
   def other_catalog_numbers
-    self[Solrizer.solr_name('otherCatalogNumbers')]
+    self[Solrizer.solr_name('other_catalog_numbers')]
   end
   def continent
     self[Solrizer.solr_name('continent')]
@@ -24,28 +24,28 @@ class SolrDocument
     self[Solrizer.solr_name('country')]
   end
   def state_province
-    self[Solrizer.solr_name('stateProvince')]
+    self[Solrizer.solr_name('state_province')]
   end
   def county
     self[Solrizer.solr_name('county')]
   end
   def higher_geography
-    self[Solrizer.solr_name('higherGeography')]
+    self[Solrizer.solr_name('higher_geography')]
   end
   def locality
     self[Solrizer.solr_name('locality')]
   end
   def decimal_latitude
-    self[Solrizer.solr_name('decimalLatitude')]
+    self[Solrizer.solr_name('decimal_latitude')]
   end
   def decimal_longitude
-    self[Solrizer.solr_name('decimalLongitude')]
+    self[Solrizer.solr_name('decimal_longitude')]
   end
   def scientific_name
-    self[Solrizer.solr_name('scientificName')]
+    self[Solrizer.solr_name('scientific_name')]
   end
   def scientific_name_authorship
-    self[Solrizer.solr_name('scientificNameAuthorship')]
+    self[Solrizer.solr_name('scientific_name_authorship')]
   end
   def kingdom
     self[Solrizer.solr_name('kingdom')]
@@ -66,16 +66,16 @@ class SolrDocument
     self[Solrizer.solr_name('genus')]
   end
   def specific_epithet
-    self[Solrizer.solr_name('specificEpithet')]
+    self[Solrizer.solr_name('specific_epithet')]
   end
   def infraspecific_epithet
-    self[Solrizer.solr_name('infraspecificEpithet')]
+    self[Solrizer.solr_name('infraspecific_epithet')]
   end
   def type_status
-    self[Solrizer.solr_name('typeStatus')]
+    self[Solrizer.solr_name('type_status')]
   end
   def basis_of_record
-    self[Solrizer.solr_name('basisOfRecord')]
+    self[Solrizer.solr_name('basis_of_record')]
   end
 
   # self.unique_key = 'id'

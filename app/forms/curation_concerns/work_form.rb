@@ -29,7 +29,7 @@ module CurationConcerns
     self.terms += [:type_status]
     self.terms += [:basis_of_record]
 
-    self.required_fields = [:title, :creator, :rights]
+    self.required_fields = [:title, :rights]
 
   end
 end

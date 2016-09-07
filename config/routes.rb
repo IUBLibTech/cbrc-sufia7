@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match '/contact' => redirect('/') , via: [:get, :post]
   
   Hydra::BatchEdit.add_routes(self)
   mount Blacklight::Engine => '/'
@@ -45,6 +46,8 @@ Rails.application.routes.draw do
     realid = (Work.search_with_conditions catalogNumber_sim: params[:id]).first['id']
     "http://#{request.host_with_port}/concern/works/#{realid}"
   }
+
+
   #this one isn't implemented yet
   #get '/purl/archive/:id' => ''
 

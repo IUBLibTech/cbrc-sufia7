@@ -29,7 +29,7 @@ module Cbrc
 
         # go through and ingest each line of the file
         CSV.foreach(data_file, headers:true) do |row|
-          cat_num = row['catalogNumber'].to_s
+          cat_num = row['catalog_number'].to_s
           # first check to make sure image exists for this line
           image_filename = "#{cat_num}-full.jpg"
           image_path = "#{data_dir}/#{image_filename}"

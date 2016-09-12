@@ -34,19 +34,10 @@ Rails.application.routes.draw do
   end
 
   #add routes for IU PURLS
-  get '/purl/thumbnail/:id' => redirect { |params, request|
-    realid = (Work.search_with_conditions catalogNumber_sim: params[:id]).first['hasRelatedImage_ssim'].first
-    "http://#{request.host_with_port}/downloads/#{realid}?file=thumbnail"
-  }
-  get '/purl/full/:id' => redirect { |params, request|
-    realid = (Work.search_with_conditions catalogNumber_sim: params[:id]).first['hasRelatedImage_ssim'].first
-    "http://#{request.host_with_port}/downloads/#{realid}"
-  }
-  get '/purl/:id' => redirect { |params, request|
-    realid = (Work.search_with_conditions catalogNumber_sim: params[:id]).first['id']
-    "http://#{request.host_with_port}/concern/works/#{realid}"
-  }
-
+  
+  get '/purl/thumbnail/:id' => 'purl#thumbnail'
+  get '/purl/:id' => 'purl#default'
+  get '/purl/full/:id' => 'purl#full'
 
   #this one isn't implemented yet
   #get '/purl/archive/:id' => ''

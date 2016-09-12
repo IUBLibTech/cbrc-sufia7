@@ -40,7 +40,7 @@ module Cbrc
             next
           end
 
-          gfs = Work.search_with_conditions catalogNumber_sim: cat_num
+          gfs = Work.search_with_conditions catalog_number_sim: cat_num
 
           multivalue_row = row.to_hash.map do |k,v|
             v ||= ''

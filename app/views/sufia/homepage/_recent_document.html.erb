@@ -1,0 +1,16 @@
+    <tr>
+      <td class="col-sm-2">
+
+        <%= link_to recent_document do %>
+          <%= render_thumbnail_tag recent_document, { width: 85 }, false %>
+        <% end %>
+      </td>
+      <td>
+        <h3>
+          <span class="sr-only">Title</span><%= link_to truncate(recent_document.to_s, length: 28, separator: ' '), recent_document  %>
+        </h3>
+        <p>
+          <span class="sr-only">Scientific name</span><%= link_to_facet_list(recent_document.scientific_name, 'scientific_name', 'no name specified').html_safe %>
+        </p>
+      </td>
+    </tr>

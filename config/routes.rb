@@ -10,12 +10,15 @@ Rails.application.routes.draw do
     concerns :searchable
   end
 
+
+
   # modified to disable account creation through the interface
   # see http://stackoverflow.com/questions/6734323/how-do-i-remove-the-devise-route-to-sign-up
   devise_for :users, :controllers => { :registrations => "registrations" }
   mount CurationConcerns::Engine, at: '/'
   resources :welcome, only: 'index'
-  root 'sufia/homepage#index'
+  #root 'sufia/homepage#index'
+  root :to => redirect('/catalog')
   curation_concerns_collections
   curation_concerns_basic_routes
   curation_concerns_embargo_management
@@ -41,6 +44,7 @@ Rails.application.routes.draw do
 
   #this one isn't implemented yet
   #get '/purl/archive/:id' => ''
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

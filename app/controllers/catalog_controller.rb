@@ -121,7 +121,7 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("locality", :stored_searchable), label: "Locality"
     config.add_show_field solr_name("decimal_latitude", :stored_searchable), label: "Decimal Latitude"
     config.add_show_field solr_name("decimal_longitude", :stored_searchable), label: "Decimal Longitude"
-    config.add_show_field solr_name("scientific_name", :stored_searchable), label: "Scientific Name"
+    
     config.add_show_field solr_name("kingdom", :stored_searchable), label: "Kingdom"
     config.add_show_field solr_name("phylum", :stored_searchable), label: "Phylum"
     config.add_show_field solr_name("dwcclass", :stored_searchable), label: "Class"
@@ -130,6 +130,7 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("genus", :stored_searchable), label: "Genus"
     config.add_show_field solr_name("specific_epithet", :stored_searchable), label: "Specific Epithet"
     config.add_show_field solr_name("infraspecific_epithet", :stored_searchable), label: "Infraspecific Epithet"
+    config.add_show_field solr_name("scientific_name", :stored_searchable), label: "Scientific Name"
     config.add_show_field solr_name("type_status", :stored_searchable), label: "Type Status"
     config.add_show_field solr_name("basis_of_record", :stored_searchable), label: "Basis Of Record"
 

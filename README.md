@@ -1,4 +1,6 @@
 # cbrc-sufia7
+#NOTE: This project is now superceded by https://github.com/IUBLibTech/imago
+
 CBRC, altered to work with sufia 7.
 
 This code represents a project to put data from the Center for Biological Research Collections (CBRC) at Indiana University into a digital repository. See http://www.iu.edu/~cbrc/ for more details about the collections themselves.
